@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ram's Personalized Page</title>
+    <title>Personalized Page</title>
+    <script src="users.js" defer></script>
 </head>
 <body>
     <h1 id="welcomeMessage"></h1>
-    <p>Welcome to your personalized page, Ram!</p>
+    <p>Welcome to your personalized page!</p>
 
     <script>
         function getQueryParam(param) {
@@ -15,9 +16,15 @@
             return urlParams.get(param);
         }
 
-        let user = getQueryParam('user');
+        // Get the user ID from the URL
+        let userId = getQueryParam('id');
+
+        // Find the user in the users array
+        let user = getUserById(userId);
+
+        // Update the page with the user's name or show a default message
         if (user) {
-            document.getElementById('welcomeMessage').textContent = `Hello, ${user}!`;
+            document.getElementById('welcomeMessage').textContent = `Hello, ${user.name}!`;
         } else {
             document.getElementById('welcomeMessage').textContent = 'Hello, Guest!';
         }
