@@ -22,6 +22,16 @@
 // function getUserById(id) {
 //     return users.find(user => user.id === id);
 // }
+        let quote = document.querySelectorAll("#quote");
+let quotee = document.getElementById("quote");
+let quotes = [
+  ' "aam ge ya gorom kora." ',
+  ' "mone geyam barij ke tng." ',
+  ' "sangin khon ge uyhar led me." ',
+];
+
+let randomNum = Math.floor(Math.random() * quotes.length);
+quotee.innerHTML = `${quotes[randomNum]}`;
 
         function getQueryParam(param) {
             let urlParams = new URLSearchParams(window.location.search);
