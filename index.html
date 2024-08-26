@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram's Personalized Page</title>
+</head>
+<body>
+    <h1 id="welcomeMessage"></h1>
+    <p>Welcome to your personalized page, Ram!</p>
+
+    <script>
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        let user = getQueryParam('user');
+        if (user) {
+            document.getElementById('welcomeMessage').textContent = `Hello, ${user}!`;
+        } else {
+            document.getElementById('welcomeMessage').textContent = 'Hello, Guest!';
+        }
+    </script>
+</body>
+</html>
