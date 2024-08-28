@@ -1,56 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalized Page</title>
-    <script src="users.js"></script>
+    <title>JOHAR Tours & Travels</title>
+    <script src="users.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="reciept.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=dancing-script@400,700&display=swap" rel="stylesheet">
+
+    <style>
+        .alert-container {
+            /* width: auto; */
+            color: red;
+            background-color: #fff3cd;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+
+            padding: 20px;
+            margin: 8px auto;
+
+
+
+            font-family: Arial, sans-serif;
+            position: absolute;
+            top: 20px;
+            left: auto;
+            /* transform: translate(-50%, -50%); */
+            z-index: 1000;
+
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .alert-container::before {
+            content: "⚠️";
+
+            font-size: 24px;
+            margin: 10px;
+        }
+
+        .alert-text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .alert-close {
+            padding: 10px 60px;
+            background-color: rgb(48, 72, 151);
+            border: 2px solid red;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 2rem;
+            margin: 20px auto;
+        }
+    </style>
 </head>
+
 <body>
-    <p id="quote">Hello</p>
-    <h1 id="welcomeMessage"></h1>
-    <p>Welcome to your personalized page!</p>
-    <h1>bello bello !</h1>
+    <div id="container">
+        <header>
+            <nav>JOHAR Tours & Travels</nav>
+        </header>
+        <main>
+            <section id="quote">
+                <p id="quotes">" Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quisquam corrupti
+                    repellendus
+                    vitae. Veniam, ipsum! "</p>
+            </section>
+            <section id="images">
+                <figure>
+                    <img src="./Img/Beach Full Img.png" alt="Digha Beach Image" srcset="">
+                    <figcaption>Digha Beach, West Bengal, India
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="./Img/Dancing Full Img.png" alt="Silda Pata Dance Image" srcset="">
+                    <figcaption>Silda Pata, West Bengal, India
+                    </figcaption>
+                </figure>
+            </section>
+            <hr>
+            <section id="reciept">
+                <span id="blueTick"></span>
+                <h3 style="text-decoration: underline; text-align: center; margin: 10px 0 40px 0;">Tourist Travel
+                    Reciept
+                </h3>
+                <p>Tourist Name: <span class="TouristName"></span></p>
+                <p>Tour Package: <span id="TourPackage"></span></p>
+                <p>Booking Reference Number: <span id="BookingReferenceNumber"></span></p>
+                <p>Travel Dates: <span id="TravelsDates"></span> <span id=""></span></p>
+                <p>Departure Location: <span id="DepartureLocation"></span></p>
+                <p>Destinations: <span id="Destinations"></span></p>
+                <h4 style="text-decoration: underline; text-align: center; margin: 20px 0 10px 0;">Included Services:
+                </h4>
+                <p>Accommodation: <span id="Accommodation"></span></p>
+                <p>Transport: <span id="Transport"></span></p>
+                <p>Tours & Activities: <span id="Tours&Activities"></span></p>
+                <p>Meals: <span id="Meals"></span></p>
+                <br>
+                <p>Package Cost: <span id="PackageCost"></span></p>
+                <p>Taxes and Fees: <span id="Taxes&Fees"></span></p>
+                <p>Total Amount: <span id="TotalAmount"></span></p>
+                <p>Payment Method: <span id="PaymentMethod"></span></p>
+                <p>Transaction ID: <span id="TransactionID"></span></p>
 
+
+            </section>
+            <hr>
+            <section id="thankYou">
+                <p>Dear <span class="TouristName" id="thankYouTravelers"></span>,
+                    <br>
+                    <br>
+                    Thank you for choosing to journey with us. We hope your travels were smooth and memorable. Your
+                    trust and enthusiasm
+                    inspire us to keep delivering exceptional experiences. We look forward to welcoming you on your next
+                    adventure. Safe
+                    travels!
+                    <br>
+                    <br>
+                    Warm regards,
+                    <br>
+                    Johar Tours & Travels
+
+                </p>
+                <br>
+                <br>
+                <p id="contact">For any questions or further assistance, please contact us at <a
+                        href="tel:6207797234">+916207797234</a>.</p>
+            </section>
+        </main>
+        <footer>
+            <div id="sblogo"></div>
+            <h4>Powered by <a href="https://sorenbakhol.github.io/" target="_blank">SorenBakhol</a></h4>
+            <div id="sbSocial">
+                <!-- X -->
+                <a href="https://x.com/sorenbakhol" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                        y="0px" viewBox="0 0 24 24">
+                        <path
+                            d="M 2.8671875 3 L 9.7363281 12.818359 L 2.734375 21 L 5.3808594 21 L 10.919922 14.509766 L 15.460938 21 L 21.371094 21 L 14.173828 10.697266 L 20.744141 3 L 18.138672 3 L 12.996094 9.0097656 L 8.7988281 3 L 2.8671875 3 z">
+                        </path>
+                    </svg></a>
+                <!-- YouTube -->
+                <a href="https://youtube.com/@sorenbakhol?sub_confirmation=1
+" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
+                        <path
+                            d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z">
+                        </path>
+                    </svg></a>
+                <!-- Instagram -->
+                <a href="https://instagram.com/sorenbakholofficial" target="_blank"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
+                        <path
+                            d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z">
+                        </path>
+                    </svg></a>
+                <!-- Facebook -->
+                <a href="https://facebook.com/sorenbakholofficial" target="_blank"><svg
+                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
+                        <path
+                            d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h7.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H19c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z">
+                        </path>
+                    </svg></a>
+            </div>
+            <hr class="footerhr">
+            <p id="made">Made with love 🧡 by <a href="https://github.com/kherwaal" target="_blank">@kherwaal</a></p>
+            <hr class="footerhr" style="margin-bottom: 0;">
+        </footer>
+        <!-- <h1 id="welcomeMessage">Welcome to JOHAR Tours & Travels</h1> -->
+    </div>
     <script>
-        // users.js
-// const users = [
-//     { id: 'U52nr0EL', name: 'Syam' },
-//     { id: '3GI4v66w', name: 'Ram' },
-//     // Add more users as needed
-// ];
+        function showAlert() {
+            // Create alert container
+            const alertContainer = document.createElement('div');
+            alertContainer.className = 'alert-container';
 
-// function getUserById(id) {
-//     return users.find(user => user.id === id);
-// }
-        let quote = document.querySelectorAll("#quote");
-let quotee = document.getElementById("quote");
-let quotes = [
-  ' "aam ge ya gorom kora." ',
-  ' "mone geyam barij ke tng." ',
-  ' "sangin khon ge uyhar led me." ',
-];
+            // Create alert text
+            const alertText = document.createElement('span');
+            alertText.className = 'alert-text';
+            alertText.textContent = 'Please Note: Our travel agency will not be responsible for any accidents or incidents that may occur during your travels.';
 
-let randomNum = Math.floor(Math.random() * quotes.length);
-quotee.innerHTML = `${quotes[randomNum]}`;
+            // Create close button
+            const closeButton = document.createElement('span');
+            closeButton.className = 'alert-close';
+            closeButton.textContent = 'Okay';
+            closeButton.onclick = function () {
+                alertContainer.remove();
+            };
 
-        function getQueryParam(param) {
-            let urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
+            // Append text and close button to alert container
+            alertContainer.appendChild(alertText);
+            alertContainer.appendChild(closeButton);
+
+            // Append alert container to body
+            document.body.appendChild(alertContainer);
         }
 
-        // Get the user ID from the URL
-        let userId = getQueryParam('id');
-
-        // Find the user in the users array
-        let user = getUserById(userId);
-
-        // Update the page with the user's name or show a default message
-        if (user) {
-            document.getElementById('welcomeMessage').textContent = `Hello, ${user.name}!`;
-        } else {
-            document.getElementById('welcomeMessage').textContent = 'Hello, Guest!';
-        }
+        // Show the alert when the page loads
+        window.onload = showAlert;
     </script>
 </body>
+
 </html>
