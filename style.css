@@ -1,0 +1,282 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  font-size: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#container {
+  width: 100%;
+  max-width: 1366px;
+  min-width: 240px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header */
+header nav {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 6px;
+}
+
+/* Main Section */
+main,
+footer {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 240px;
+  margin: 0 auto;
+}
+
+/* Quote Section */
+#quote {
+  font-size: 2.1rem;
+  font-family: "Soren", serif;
+  text-align: center;
+  color: dimgray;
+  margin: 35px 0 20px 0;
+}
+
+/* Images Section */
+#images {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#images figure {
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+
+/* Horizontal Rule */
+hr {
+  align-self: center;
+  width: 100%;
+  margin: 50px auto;
+  border: none;
+  border-top: 2px dashed #00f;
+}
+
+/* Receipt Section */
+#reciept {
+  font-family: "JetBrains Mono", monospace;
+  width: 100%;
+}
+
+#reciept h3 {
+  font-size: 1.2rem;
+}
+
+#reciept h4 {
+  font-size: 1rem;
+}
+
+#reciept p {
+  padding: 0 20px;
+  font-size: 1.1rem;
+}
+
+#reciept span {
+  color: gray;
+  font-weight: 500;
+}
+
+/* Blue Tick */
+#blueTick {
+  display: block;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#blueTick::after {
+  content: "✔";
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* Thank You Section */
+#thankYou {
+  margin: 50px 0;
+}
+
+#thankYou p {
+  font-size: 1.2rem;
+  font-family: cursive, sans-serif;
+  padding: 0 20px;
+}
+
+#thankYou #thankYouTravelers {
+  color: gray;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+footer #sblogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background: url(./Img/SOREN\ BAKHOL\ OFFICIAL\ LOGO\ BLACK\ AND\ WHITE\ WITH\ TAG.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  margin: 20px 0;
+}
+
+footer h4 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+footer h4::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: green;
+  display: block;
+}
+
+footer a {
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+}
+
+footer #sbSocial svg {
+  width: 20px;
+  height: 20px;
+  margin: 20px 5px;
+}
+
+.footerhr {
+  border: 1px solid rgba(0, 0, 255, 0.459);
+}
+#made {
+  font-size: 1.2rem;
+}
+
+/* Media Queries */
+
+/* Extra Small Devices */
+@media (max-width: 240px) {
+  #container {
+    width: 100%;
+    min-width: 0px;
+    margin: 0;
+    padding: 0;
+  }
+  .alert-container {
+    width: 100%;
+    top: 20%;
+  }
+  header nav {
+    font-size: 1.2rem;
+  }
+  #quote p {
+    font-size: 1rem;
+  }
+  #images img {
+    width: 100%;
+  }
+  figcaption {
+    font-size: 0.6rem;
+  }
+  hr {
+    width: 90%;
+  }
+  #reciept h3 {
+    font-size: 0.9rem;
+  }
+  #reciept h4 {
+    font-size: 0.7rem;
+  }
+  #reciept p {
+    font-size: 0.6rem;
+  }
+  #made {
+    font-size: 0.8rem;
+  }
+  #thankYou p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Devices */
+@media (min-width: 241px) and (max-width: 640px) {
+  #container {
+    padding: 0;
+    margin: 0;
+  }
+  header nav {
+    font-size: 1.7rem;
+  }
+  #quote p {
+    padding: 0 10px;
+    font-size: 1.5rem;
+    /* text-align: center; */
+  }
+  #images img {
+    width: 100%;
+  }
+  hr {
+    width: 90%;
+  }
+  #reciept p {
+    font-size: 0.8rem;
+  }
+  #made {
+    font-size: 0.8rem;
+  }
+  #thankYou p {
+    font-size: 1rem;
+  }
+}
+
+/* Medium Devices */
+@media (min-width: 641px) and (max-width: 1007px) {
+  #images img {
+    width: 100%;
+  }
+  #quote {
+    font-size: 1.8rem;
+  }
+}
