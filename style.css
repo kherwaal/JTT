@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "soren";
+  src: url(https://cdn.jsdelivr.net/gh/sorenbakhol/privat@main/f/Soren.woff);
+}
+
 /* Global Styles */
 * {
   margin: 0;
