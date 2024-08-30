@@ -7,7 +7,7 @@ const ReceiptInfo = [
   { id: "Transport", name: "" },
   { id: "Tours&Activities", name: "" },
   { id: "Meals", name: "" },
-  { id: "PackageCost", name: "₹1500.00" },
+  { id: "PackageCost", name: "₹0000.00" },
   { id: "Taxes&Fees", name: "₹00.00" },
   { id: "PaymentMethod", name: ['Cash', 'Online'] },
 ];
